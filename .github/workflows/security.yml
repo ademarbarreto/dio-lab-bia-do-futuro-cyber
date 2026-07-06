@@ -1,0 +1,103 @@
+name: Segurança (Cyber)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Roda toda segunda-feira às 06:00 UTC, para pegar CVEs novas
+    # mesmo sem mudanças no código.
+    - cron: "0 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  # ==========================================================
+  # 1. Scanner de segredos vazados (chaves de API, tokens, etc.)
+  # ==========================================================
+  secret-scan:
+    name: Detecção de segredos (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # necessário para o gitleaks varrer todo o histórico
+
+      - name: Rodar gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # ==========================================================
+  # 2. Auditoria de vulnerabilidades em dependências (CVEs)
+  # ==========================================================
+  dependency-audit:
+    name: Auditoria de dependências (pip-audit)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar pip-audit
+        run: pip install pip-audit
+
+      - name: Auditar requirements.txt (raiz)
+        run: pip-audit -r requirements.txt --desc
+        continue-on-error: false
+
+      - name: Auditar src/requirements.txt
+        run: pip-audit -r src/requirements.txt --desc
+        continue-on-error: false
+
+  # ==========================================================
+  # 3. Análise estática de código (SAST) para padrões inseguros
+  # ==========================================================
+  sast:
+    name: Análise estática (bandit)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar bandit
+        run: pip install bandit
+
+      - name: Rodar bandit em src/
+        run: bandit -r src -ll -x "**/tests/**"
+
+  # ==========================================================
+  # 4. Testes automatizados da camada de segurança
+  # ==========================================================
+  unit-tests:
+    name: Testes de segurança (pytest)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: |
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Rodar testes
+        run: pytest tests/ -v

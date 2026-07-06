@@ -1,0 +1,77 @@
+<svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Arquitetura do Agente ADE com camada de segurança</title>
+<desc>Fluxo: Cliente envia pergunta pela interface Streamlit; passa por uma camada de segurança de entrada (anti prompt injection e rate limiting); o Agente ADE consulta a base de conhecimento; a resposta passa por uma camada de segurança de saída (bloqueio de compliance) antes de chegar ao cliente; as duas camadas de segurança alimentam um log de auditoria; um pipeline de CI/CD independente (gitleaks, pip-audit, bandit, dependabot) protege continuamente o código-fonte.</desc>
+<defs>
+<marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="arrow-coral" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#D85A30" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+
+<text x="500" y="34" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#2C2C2A">Arquitetura do Agente ADE — com camada de segurança</text>
+<text x="500" y="56" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#5F5E5A">Bootcamp Bradesco · GenAI, Dados &amp; Cyber</text>
+
+<rect x="340" y="100" width="220" height="56" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="450" y="128" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#0C447C">Cliente</text>
+
+<line x1="450" y1="156" x2="450" y2="200" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+<rect x="300" y="200" width="300" height="64" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="450" y="226" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#0C447C">Interface Streamlit</text>
+<text x="450" y="248" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#185FA5">Chat interativo com o cliente</text>
+
+<line x1="450" y1="264" x2="450" y2="308" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+<rect x="250" y="308" width="400" height="70" rx="10" fill="#FAECE7" stroke="#D85A30" stroke-width="1"/>
+<text x="450" y="336" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#993C1D">Camada de segurança · entrada</text>
+<text x="450" y="358" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#D85A30">Anti prompt injection · rate limiting</text>
+
+<path d="M450,378 L450,400 L250,400 L250,420" fill="none" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+<rect x="120" y="420" width="260" height="70" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+<text x="250" y="448" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#3C3489">Agente ADE (LLM)</text>
+<text x="250" y="470" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#534AB7">GPT-4.1-mini via OpenAI API</text>
+
+<rect x="440" y="420" width="260" height="70" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+<text x="570" y="448" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#085041">Base de conhecimento</text>
+<text x="570" y="470" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#0F6E56">CSV e JSON mockados</text>
+
+<line x1="384" y1="455" x2="436" y2="455" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow-gray)" marker-start="url(#arrow-gray)"/>
+<text x="410" y="443" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#5F5E5A">contexto</text>
+
+<path d="M250,490 L250,510 L450,510 L450,534" fill="none" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+<rect x="250" y="534" width="400" height="70" rx="10" fill="#FAECE7" stroke="#D85A30" stroke-width="1"/>
+<text x="450" y="562" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#993C1D">Camada de segurança · saída</text>
+<text x="450" y="584" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#D85A30">Bloqueio de termos de investimento</text>
+
+<line x1="450" y1="604" x2="450" y2="648" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+<rect x="300" y="648" width="300" height="60" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="450" y="678" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#0C447C">Resposta ao cliente</text>
+
+<rect x="760" y="410" width="190" height="90" rx="10" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+<text x="855" y="440" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#2C2C2A">Log de auditoria</text>
+<text x="855" y="464" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5F5E5A">Hash SHA-256 · LGPD</text>
+
+<path d="M650,343 L720,343 L720,435 L760,435" fill="none" stroke="#D85A30" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arrow-coral)"/>
+<path d="M650,569 L720,569 L720,475 L760,475" fill="none" stroke="#D85A30" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arrow-coral)"/>
+
+<rect x="60" y="768" width="880" height="190" rx="16" fill="#FFFFFF" stroke="#854F0B" stroke-width="1" stroke-dasharray="6 4"/>
+<text x="90" y="798" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#633806">Pipeline CI/CD · proteção contínua</text>
+<text x="90" y="818" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#854F0B">Executa a cada push, pull request e semanalmente</text>
+
+<rect x="80" y="842" width="195" height="60" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+<text x="177" y="864" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#633806">Gitleaks</text>
+<text x="177" y="884" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#854F0B">Scan de segredos</text>
+
+<rect x="295" y="842" width="195" height="60" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+<text x="392" y="864" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#633806">pip-audit</text>
+<text x="392" y="884" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#854F0B">CVEs de dependências</text>
+
+<rect x="510" y="842" width="195" height="60" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+<text x="607" y="864" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#633806">Bandit</text>
+<text x="607" y="884" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#854F0B">Análise estática (SAST)</text>
+
+<rect x="725" y="842" width="195" height="60" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+<text x="822" y="864" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#633806">Dependabot</text>
+<text x="822" y="884" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#854F0B">Atualização automática</text>
+</svg>

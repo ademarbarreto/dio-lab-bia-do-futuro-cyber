@@ -1,0 +1,28 @@
+2026-07-05 16:01:00,039 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-05 16:01:02,604 | INFO | pergunta_hash=5413e28bfca8d586 tokens_in=904 tokens_out=162 custo=0.006950 latencia=4.09s
+2026-07-05 16:01:21,953 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-05 16:01:24,163 | INFO | pergunta_hash=b523b8e1115ac8f4 tokens_in=906 tokens_out=217 custo=0.007785 latencia=3.00s
+2026-07-05 16:01:45,917 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-05 16:01:46,989 | INFO | pergunta_hash=ecd8b2ef8f94369d tokens_in=907 tokens_out=104 custo=0.006095 latencia=2.17s
+2026-07-05 16:02:02,714 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-05 16:02:04,249 | INFO | pergunta_hash=507a9a8be3d145a8 tokens_in=898 tokens_out=93 custo=0.005885 latencia=3.04s
+2026-07-05 16:02:24,738 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-05 16:02:27,705 | INFO | pergunta_hash=a90c0f84d2bbcf01 tokens_in=900 tokens_out=179 custo=0.007185 latencia=3.60s
+2026-07-05 16:09:00,098 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-05 16:09:01,533 | INFO | pergunta_hash=6d8dfe237921bcb0 tokens_in=905 tokens_out=83 custo=0.005770 latencia=2.49s
+2026-07-05 20:37:48,762 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-05 20:37:50,907 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=904 tokens_out=189 custo=0.007355 latencia=4.40s
+2026-07-05 20:37:56,693 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-05 20:37:58,282 | INFO | pergunta_hash=cf3d9d65c5b244a6 tokens_in=905 tokens_out=144 custo=0.006685 latencia=2.52s
+2026-07-05 20:38:09,495 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-05 20:38:11,007 | INFO | pergunta_hash=aadb672062820ad8 tokens_in=904 tokens_out=111 custo=0.006185 latencia=2.61s
+2026-07-05 20:39:07,251 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-05 20:39:09,059 | INFO | pergunta_hash=a6d300155c92e64b tokens_in=950 tokens_out=197 custo=0.007705 latencia=2.84s
+2026-07-05 20:39:38,803 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-05 20:39:40,344 | INFO | pergunta_hash=73a0d1d7edf0cd33 tokens_in=947 tokens_out=186 custo=0.007525 latencia=2.22s
+2026-07-06 09:01:20,118 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 09:01:22,748 | INFO | pergunta_hash=f37f6ff392b7868d tokens_in=932 tokens_out=151 custo=0.006925 latencia=5.33s
+2026-07-06 09:01:31,968 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 09:01:34,915 | INFO | pergunta_hash=cd432049bcd14029 tokens_in=934 tokens_out=164 custo=0.007130 latencia=4.54s
+2026-07-06 09:01:40,275 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 09:01:43,341 | INFO | pergunta_hash=d57d3b719deb987f tokens_in=938 tokens_out=176 custo=0.007330 latencia=4.21s
