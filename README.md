@@ -251,4 +251,10 @@ Projeto desenvolvido por **Ademar Silva Barreto Junior** como uma solução orig
 
 Este repositório reflete o desenvolvimento completo de documentação e código do Agente ADE.
 
-Linkedin: **https://www.linkedin.com/in/ademarsilvabarretojunior/**
+
+- ✉ **Email:** [ademar.barreto@gmail.com](mailto:ademar.barreto@gmail.com)
+- 💼 **LinkedIn:** [ademarsilvabarretojunior](https://www.linkedin.com/in/ademarsilvabarretojunior/)
+- ✍️ **Portfólio:** [ademarbarreto.github.io](https://ademarbarreto.github.io)
+- 💻 **GitHub:** [ademarbarreto](https://github.com/ademarbarreto)
+- ✍️ **Medium:** [@ademar.barreto](https://medium.com/@ademar.barreto)
+- 📞 **Telefone:** + 55 (21) 99156-7836
