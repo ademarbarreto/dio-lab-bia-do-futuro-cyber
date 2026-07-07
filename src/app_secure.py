@@ -139,6 +139,15 @@ DICAS_EDUCACAO = [
 ]
 
 # ==============================================================
+# Clientes mockados disponíveis (nome de exibição -> pasta em data/clientes/)
+# ==============================================================
+CLIENTES = {
+    "João Silva": "joao_silva",
+    "Mariana Costa": "mariana_costa",
+    "Rafael Andrade": "rafael_andrade",
+}
+
+# ==============================================================
 # Config da página
 # ==============================================================
 st.set_page_config(
@@ -163,6 +172,50 @@ st.markdown("""
 }
 .sidebar-brand h2 { color: #FFFFFF !important; font-size: 20px !important; margin: 0 !important; }
 .sidebar-brand p  { color: #FBD8DE !important; font-size: 11px !important; margin: 3px 0 0 !important; }
+
+/* Botão "Nova conversa": por padrão herda fundo claro do tema
+   (secondaryBackgroundColor) + texto claro do wildcard acima = invisível.
+   Fixamos um contraste explícito. */
+[data-testid="stSidebar"] .stButton button {
+    background-color: #FFFFFF !important;
+    color: #850016 !important;
+    border: 1px solid #FBE5E9 !important;
+    font-weight: 600 !important;
+}
+[data-testid="stSidebar"] .stButton button:hover {
+    background-color: #FBE5E9 !important;
+    border-color: #850016 !important;
+    color: #850016 !important;
+}
+[data-testid="stSidebar"] .stButton button p {
+    color: #850016 !important;
+}
+
+/* Selectbox (Cliente, Modo): mesmo problema de contraste — o valor
+   selecionado usa fundo claro do tema, então força texto escuro. */
+[data-testid="stSidebar"] [data-baseweb="select"] > div {
+    background-color: #FFFFFF !important;
+    border-color: #FBE5E9 !important;
+}
+[data-testid="stSidebar"] [data-baseweb="select"] * {
+    color: #850016 !important;
+}
+
+/* Valor de "Uso da sessão": precisa de !important porque o wildcard
+   [data-testid="stSidebar"] * acima também usa !important — sem isso,
+   um style inline comum perde a disputa de especificidade e o texto
+   fica invisível (rosa claro sobre fundo branco). */
+.uso-sessao-valor {
+    font-size: 12px !important;
+    color: #850016 !important;
+    font-weight: 600 !important;
+    background: #FFFFFF !important;
+    border-radius: 6px !important;
+    padding: 3px 8px !important;
+    display: inline-block !important;
+    margin-bottom: 5px !important;
+}
+
 .modo-bar {
     background: #FBE5E9; border-radius: 8px;
     padding: 9px 13px; font-size: 12px; color: #555;
@@ -201,12 +254,15 @@ st.markdown("""
 # Estado da sessão
 # ==============================================================
 def init_estado():
+    primeiro_nome = next(iter(CLIENTES.keys()))
     defs = {
         "custo_total": 0.0,
         "num_perguntas": 0,
         "bloqueado": False,
         "mensagens": [],
         "modo": MODOS[0],
+        "cliente_nome": primeiro_nome,
+        "cliente": CLIENTES[primeiro_nome],
     }
     for k, v in defs.items():
         if k not in st.session_state:
@@ -214,6 +270,35 @@ def init_estado():
 
 
 init_estado()
+
+# ==============================================================
+# Sidebar (parte 1): marca + seletor de cliente
+# Precisa rodar ANTES de carregar_dados(), para que a troca de cliente já
+# valha no mesmo rerun em que o usuário seleciona um novo nome.
+# ==============================================================
+with st.sidebar:
+    st.markdown("""
+    <div class="sidebar-brand">
+        <h2>💰 ADE</h2>
+        <p>Gestor Pessoal Financeiro Inteligente</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("**👤 Cliente**")
+    nomes_clientes = list(CLIENTES.keys())
+    cliente_nome_selecionado = st.selectbox(
+        "cliente", options=nomes_clientes,
+        index=nomes_clientes.index(st.session_state.cliente_nome),
+        label_visibility="collapsed",
+    )
+    if CLIENTES[cliente_nome_selecionado] != st.session_state.cliente:
+        # Troca de cliente reinicia a conversa (novo contexto), mas
+        # mantém os contadores de custo/perguntas da sessão — por
+        # design, para não virar uma forma de burlar os limites.
+        st.session_state.cliente = CLIENTES[cliente_nome_selecionado]
+        st.session_state.cliente_nome = cliente_nome_selecionado
+        st.session_state.mensagens = []
+        st.rerun()
 
 # ==============================================================
 # Carregar variáveis de ambiente (.env ou st.secrets)
@@ -238,24 +323,26 @@ client = OpenAI(api_key=api_key, timeout=REQUEST_TIMEOUT_SECONDS)
 # Carregar dados da Base de Conhecimento (com tratamento de erro)
 # ==============================================================
 @st.cache_data
-def carregar_dados():
-    """Carrega os dados da base de conhecimento com tratamento de erro
-    que evita vazar stack traces / paths internos para o usuário final."""
+def carregar_dados(cliente_slug: str):
+    """Carrega os dados da base de conhecimento do cliente selecionado, com
+    tratamento de erro que evita vazar stack traces / paths internos para o
+    usuário final. O catálogo de produtos é compartilhado entre clientes."""
     try:
-        with open(DATA_DIR / "perfil_investidor.json", encoding="utf-8") as f:
+        cliente_dir = DATA_DIR / "clientes" / cliente_slug
+        with open(cliente_dir / "perfil_investidor.json", encoding="utf-8") as f:
             perfil = json.load(f)
         with open(DATA_DIR / "produtos_financeiros.json", encoding="utf-8") as f:
             produtos = json.load(f)
-        historico = pd.read_csv(DATA_DIR / "historico_atendimento.csv")
-        transacoes = pd.read_csv(DATA_DIR / "transacoes.csv")
+        historico = pd.read_csv(cliente_dir / "historico_atendimento.csv")
+        transacoes = pd.read_csv(cliente_dir / "transacoes.csv")
         return perfil, produtos, historico, transacoes
     except (FileNotFoundError, json.JSONDecodeError, pd.errors.ParserError) as e:
-        logger.error(f"Falha ao carregar base de conhecimento: {type(e).__name__}")
+        logger.error(f"Falha ao carregar base de conhecimento ({cliente_slug}): {type(e).__name__}")
         raise RuntimeError("Falha ao carregar a base de conhecimento.") from e
 
 
 try:
-    perfil, produtos, historico, transacoes = carregar_dados()
+    perfil, produtos, historico, transacoes = carregar_dados(st.session_state.cliente)
 except RuntimeError:
     st.error("❌ Não foi possível carregar os dados do cliente. Contate o suporte.")
     st.stop()
@@ -445,15 +532,10 @@ def processar_pergunta(pergunta_bruta: str, modo: str):
 
 
 # ==============================================================
-# Sidebar
+# Sidebar (parte 2): modo, uso da sessão e ações
 # ==============================================================
 with st.sidebar:
-    st.markdown("""
-    <div class="sidebar-brand">
-        <h2>💰 ADE</h2>
-        <p>Gestor Pessoal Financeiro Inteligente</p>
-    </div>
-    """, unsafe_allow_html=True)
+    st.caption(f"{perfil['profissao']} · {perfil['idade']} anos · Perfil {perfil['perfil_investidor']}")
 
     st.markdown("**🎯 Modo de Atuação**")
     modo_selecionado = st.radio(
@@ -467,16 +549,17 @@ with st.sidebar:
 
     st.divider()
 
-    st.markdown("**👤 Cliente**")
-    st.write(f"**{perfil['nome']}**")
-    st.caption(f"{perfil['profissao']} · {perfil['idade']} anos")
-    st.caption(f"Perfil de investidor: {perfil['perfil_investidor']}")
-
-    st.divider()
-
     st.markdown("**📊 Uso da sessão**")
     progresso = min(st.session_state.custo_total / LIMITE_CRITICO, 1.0) if LIMITE_CRITICO else 0
-    st.progress(progresso, text=f"${st.session_state.custo_total:.4f} de ${LIMITE_CRITICO:.2f}")
+    pct = int(progresso * 100)
+    st.markdown(f"""
+    <div class="uso-sessao-valor">
+        ${st.session_state.custo_total:.4f} de ${LIMITE_CRITICO:.2f}
+    </div>
+    <div style="background:#FBE5E9;border-radius:8px;height:14px;overflow:hidden;margin-bottom:6px;">
+        <div style="background:#850016;width:{pct}%;height:100%;border-radius:8px;"></div>
+    </div>
+    """, unsafe_allow_html=True)
     st.caption(f"{st.session_state.num_perguntas}/{MAX_PERGUNTAS_POR_SESSAO} perguntas nesta sessão")
 
     st.divider()

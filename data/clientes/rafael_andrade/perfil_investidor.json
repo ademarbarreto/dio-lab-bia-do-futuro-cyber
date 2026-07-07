@@ -1,0 +1,23 @@
+{
+  "nome": "Rafael Andrade",
+  "idade": 26,
+  "profissao": "Desenvolvedor de Software",
+  "renda_mensal": 8500.00,
+  "perfil_investidor": "arrojado",
+  "objetivo_principal": "Construir patrimônio no longo prazo",
+  "patrimonio_total": 22000.00,
+  "reserva_emergencia_atual": 8000.00,
+  "aceita_risco": true,
+  "metas": [
+    {
+      "meta": "Completar reserva de emergência",
+      "valor_necessario": 25500.00,
+      "prazo": "2026-03"
+    },
+    {
+      "meta": "Viagem para o exterior",
+      "valor_necessario": 18000.00,
+      "prazo": "2026-12"
+    }
+  ]
+}

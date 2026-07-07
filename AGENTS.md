@@ -24,6 +24,9 @@
 Cliente abre o app (Streamlit)
        │
        ▼
+Seleciona o CLIENTE (sidebar — 3 perfis mockados: João Silva, Mariana Costa, Rafael Andrade)
+       │
+       ▼
 Seleciona o MODO de atuação (sidebar)
        │
        ├─ 💬 Chat Livre              → Pergunta livre, ADE identifica o contexto

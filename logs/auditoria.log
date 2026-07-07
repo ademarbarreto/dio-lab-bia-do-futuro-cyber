@@ -26,3 +26,157 @@
 2026-07-06 09:01:34,915 | INFO | pergunta_hash=cd432049bcd14029 tokens_in=934 tokens_out=164 custo=0.007130 latencia=4.54s
 2026-07-06 09:01:40,275 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2026-07-06 09:01:43,341 | INFO | pergunta_hash=d57d3b719deb987f tokens_in=938 tokens_out=176 custo=0.007330 latencia=4.21s
+2026-07-06 19:00:27,227 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:00:29,222 | INFO | pergunta_hash=6d8dfe237921bcb0 tokens_in=939 tokens_out=168 custo=0.007215 latencia=4.60s
+2026-07-06 19:00:32,188 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:00:34,052 | INFO | pergunta_hash=cb42440ff64da2dd tokens_in=939 tokens_out=181 custo=0.007410 latencia=2.92s
+2026-07-06 19:00:34,052 | WARNING | Resposta bloqueada por violação de compliance. hash=cb42440ff64da2dd
+2026-07-06 19:00:56,473 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:00:58,582 | INFO | pergunta_hash=1777ca63e178ddfb tokens_in=940 tokens_out=191 custo=0.007565 latencia=3.21s
+2026-07-06 19:04:41,605 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:04:44,150 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=904 tokens_out=233 custo=0.008015 latencia=3.56s
+2026-07-06 19:04:49,676 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:04:51,256 | INFO | pergunta_hash=cf3d9d65c5b244a6 tokens_in=905 tokens_out=150 custo=0.006775 latencia=2.59s
+2026-07-06 19:11:42,658 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:11:45,445 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=904 tokens_out=206 custo=0.007610 latencia=3.87s
+2026-07-06 19:11:53,120 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:11:54,198 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:11:56,079 | INFO | pergunta_hash=cf3d9d65c5b244a6 tokens_in=905 tokens_out=170 custo=0.007075 latencia=2.47s
+2026-07-06 19:12:11,472 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:12:13,291 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=904 tokens_out=178 custo=0.007190 latencia=3.67s
+2026-07-06 19:12:14,138 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:12:16,062 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:12:16,883 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:12:18,154 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:12:19,451 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:12:20,588 | INFO | pergunta_hash=cf3d9d65c5b244a6 tokens_in=905 tokens_out=143 custo=0.006670 latencia=1.80s
+2026-07-06 19:14:52,754 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:14:54,604 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=904 tokens_out=210 custo=0.007670 latencia=2.75s
+2026-07-06 19:15:37,175 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:15:38,897 | INFO | pergunta_hash=aadb672062820ad8 tokens_in=904 tokens_out=174 custo=0.007130 latencia=2.64s
+2026-07-06 19:15:40,166 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:15:41,640 | INFO | pergunta_hash=aadb672062820ad8 tokens_in=904 tokens_out=181 custo=0.007235 latencia=2.54s
+2026-07-06 19:27:58,481 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:28:00,674 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=904 tokens_out=194 custo=0.007430 latencia=3.34s
+2026-07-06 19:39:53,217 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:39:56,055 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:39:58,022 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=904 tokens_out=206 custo=0.007610 latencia=2.93s
+2026-07-06 19:40:02,388 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:40:03,708 | INFO | pergunta_hash=cf3d9d65c5b244a6 tokens_in=905 tokens_out=152 custo=0.006805 latencia=2.24s
+2026-07-06 19:40:09,023 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:40:11,426 | INFO | pergunta_hash=aadb672062820ad8 tokens_in=904 tokens_out=188 custo=0.007340 latencia=3.36s
+2026-07-06 19:41:21,196 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:41:22,873 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=904 tokens_out=167 custo=0.007025 latencia=2.73s
+2026-07-06 19:43:10,950 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:43:12,569 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=904 tokens_out=204 custo=0.007580 latencia=2.71s
+2026-07-06 19:44:32,030 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-06 19:44:34,277 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=904 tokens_out=224 custo=0.007880 latencia=3.38s
+2026-07-07 00:02:34,199 | ERROR | Falha ao carregar base de conhecimento (joao_silva): FileNotFoundError
+2026-07-07 00:12:33,807 | ERROR | Falha ao carregar base de conhecimento (joao_silva): FileNotFoundError
+2026-07-07 00:12:39,152 | ERROR | Falha ao carregar base de conhecimento (mariana_costa): FileNotFoundError
+2026-07-07 00:12:43,070 | ERROR | Falha ao carregar base de conhecimento (rafael_andrade): FileNotFoundError
+2026-07-07 00:14:30,697 | ERROR | Falha ao carregar base de conhecimento (joao_silva): FileNotFoundError
+2026-07-07 00:14:58,397 | ERROR | Falha ao carregar base de conhecimento (joao_silva): FileNotFoundError
+2026-07-07 00:15:04,054 | ERROR | Falha ao carregar base de conhecimento (rafael_andrade): FileNotFoundError
+2026-07-07 00:15:06,763 | ERROR | Falha ao carregar base de conhecimento (joao_silva): FileNotFoundError
+2026-07-07 00:15:10,040 | ERROR | Falha ao carregar base de conhecimento (mariana_costa): FileNotFoundError
+2026-07-07 00:15:13,586 | ERROR | Falha ao carregar base de conhecimento (rafael_andrade): FileNotFoundError
+2026-07-07 00:18:56,173 | ERROR | Falha ao carregar base de conhecimento (joao_silva): FileNotFoundError
+2026-07-07 00:19:11,032 | ERROR | Falha ao carregar base de conhecimento (mariana_costa): FileNotFoundError
+2026-07-07 00:19:12,696 | ERROR | Falha ao carregar base de conhecimento (rafael_andrade): FileNotFoundError
+2026-07-07 00:19:14,709 | ERROR | Falha ao carregar base de conhecimento (rafael_andrade): FileNotFoundError
+2026-07-07 00:26:42,022 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 00:26:44,317 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=902 tokens_out=181 custo=0.007225 latencia=5.75s
+2026-07-07 00:26:49,890 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 00:26:52,202 | INFO | pergunta_hash=cf3d9d65c5b244a6 tokens_in=903 tokens_out=151 custo=0.006780 latencia=3.35s
+2026-07-07 00:27:09,203 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 00:27:31,972 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 00:27:35,140 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=904 tokens_out=228 custo=0.007940 latencia=4.20s
+2026-07-07 00:28:54,035 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 00:28:56,390 | INFO | pergunta_hash=6d8dfe237921bcb0 tokens_in=941 tokens_out=122 custo=0.006535 latencia=3.19s
+2026-07-07 00:29:00,687 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 00:29:02,631 | INFO | pergunta_hash=cb42440ff64da2dd tokens_in=941 tokens_out=139 custo=0.006790 latencia=2.74s
+2026-07-07 00:29:06,477 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 00:29:09,190 | INFO | pergunta_hash=1777ca63e178ddfb tokens_in=942 tokens_out=217 custo=0.007965 latencia=3.37s
+2026-07-07 00:29:21,139 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 00:29:24,562 | INFO | pergunta_hash=a6d300155c92e64b tokens_in=952 tokens_out=179 custo=0.007445 latencia=4.09s
+2026-07-07 00:29:24,565 | INFO | Custo da sessão se aproximando do limite de aviso.
+2026-07-07 08:34:44,791 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 08:34:48,666 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=904 tokens_out=184 custo=0.007280 latencia=7.08s
+2026-07-07 08:39:44,009 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 08:39:46,669 | INFO | pergunta_hash=47bc3a7661f08665 tokens_in=904 tokens_out=190 custo=0.007370 latencia=4.20s
+2026-07-07 09:50:59,017 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 09:51:01,395 | INFO | pergunta_hash=47aa57664583a6e3 tokens_in=937 tokens_out=159 custo=0.007070 latencia=4.47s
+2026-07-07 09:51:05,148 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 09:51:28,069 | ERROR | Erro inesperado ao processar a pergunta.
+Traceback (most recent call last):
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 127, in __iter__
+    for part in self._httpcore_stream:
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 407, in __iter__
+    raise exc from None
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 403, in __iter__
+    for part in self._stream:
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 342, in __iter__
+    raise exc
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 334, in __iter__
+    for chunk in self._connection._receive_response_body(**kwargs):
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 203, in _receive_response_body
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/src/app_secure.py", line 442, in chamar_api
+    for chunk in stream:
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/openai/_streaming.py", line 46, in __iter__
+    for item in self._iterator:
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/openai/_streaming.py", line 59, in __stream__
+    for sse in iterator:
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/openai/_streaming.py", line 50, in _iter_events
+    yield from self._decoder.iter_bytes(self.response.iter_bytes())
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/openai/_streaming.py", line 282, in iter_bytes
+    for chunk in self._iter_chunks(iterator):
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/openai/_streaming.py", line 293, in _iter_chunks
+    for chunk in iterator:
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpx/_models.py", line 897, in iter_bytes
+    for raw_bytes in self.iter_raw():
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpx/_models.py", line 951, in iter_raw
+    for raw_stream_bytes in self.stream:
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpx/_client.py", line 153, in __iter__
+    for chunk in self._stream:
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 126, in __iter__
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/ademarbarreto/dio/BRADESCO/dio-lab-bia-do-futuro-cyber/venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout: The read operation timed out
+2026-07-07 09:51:43,276 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 09:51:48,574 | INFO | pergunta_hash=57628f836b43f4ff tokens_in=938 tokens_out=200 custo=0.007690 latencia=6.51s
+2026-07-07 09:52:07,535 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 09:52:10,019 | INFO | pergunta_hash=47aa57664583a6e3 tokens_in=937 tokens_out=132 custo=0.006665 latencia=3.75s
+2026-07-07 09:52:12,710 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 09:52:16,772 | INFO | pergunta_hash=57628f836b43f4ff tokens_in=938 tokens_out=218 custo=0.007960 latencia=4.73s
+2026-07-07 09:53:56,153 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 09:53:58,956 | INFO | pergunta_hash=6d8dfe237921bcb0 tokens_in=939 tokens_out=132 custo=0.006675 latencia=3.79s
+2026-07-07 09:54:02,591 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 09:54:04,463 | INFO | pergunta_hash=cb42440ff64da2dd tokens_in=939 tokens_out=123 custo=0.006540 latencia=2.81s
+2026-07-07 09:54:04,464 | WARNING | Resposta bloqueada por violação de compliance. hash=cb42440ff64da2dd
+2026-07-07 09:55:07,843 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 09:55:10,221 | INFO | pergunta_hash=f37f6ff392b7868d tokens_in=932 tokens_out=144 custo=0.006820 latencia=3.30s
+2026-07-07 09:56:34,134 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-07 09:56:36,880 | INFO | pergunta_hash=a6d300155c92e64b tokens_in=950 tokens_out=191 custo=0.007615 latencia=3.77s
+2026-07-07 09:56:36,881 | INFO | Custo da sessão se aproximando do limite de aviso.

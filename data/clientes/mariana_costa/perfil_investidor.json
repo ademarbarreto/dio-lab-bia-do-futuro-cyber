@@ -1,0 +1,23 @@
+{
+  "nome": "Mariana Costa",
+  "idade": 54,
+  "profissao": "Professora",
+  "renda_mensal": 6200.00,
+  "perfil_investidor": "conservador",
+  "objetivo_principal": "Complementar a aposentadoria",
+  "patrimonio_total": 180000.00,
+  "reserva_emergencia_atual": 45000.00,
+  "aceita_risco": false,
+  "metas": [
+    {
+      "meta": "Complementar aposentadoria",
+      "valor_necessario": 300000.00,
+      "prazo": "2032-01"
+    },
+    {
+      "meta": "Reforma da casa",
+      "valor_necessario": 40000.00,
+      "prazo": "2026-12"
+    }
+  ]
+}
