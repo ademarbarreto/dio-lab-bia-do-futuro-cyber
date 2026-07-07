@@ -1,4 +1,4 @@
-## 🚀 Nome do Projeto 
+## 🚀 Nome do Projeto
 
 ![ADE - Gestor Pessoal Financeiro Inteligente](./images/banner-ade.svg)
 
@@ -8,10 +8,10 @@
 
 Este projeto utiliza Inteligência Artificial para analisar hábitos financeiros, classificar despesas automaticamente e gerar insights personalizados.
 
-
 O Agente ADE (Gestor Pessoal Financeiro Inteligente) é uma solução proprietária de inteligência artificial generativa projetada para a gestão estratégica de finanças pessoais. Este projeto transforma dados financeiros brutos em inteligência acionável, atuando como um consultor autônomo que antecipa necessidades e personaliza explicações financeiras com base no contexto real do cliente — sem nunca recomendar produtos ou aplicações específicas (ver [AGENTS.md](./AGENTS.md)).
 
 ## ⚙️ Funcionalidades do agente ADE
+
 ```
 ✅ Possui Base de Conhecimento carregada via código em Python
 ✅ Classificação automática de despesas
@@ -33,7 +33,9 @@ O Agente ADE (Gestor Pessoal Financeiro Inteligente) é uma solução proprietá
 ❌ NÃO faz suposições
 ❌ Se a informação não estiver no contexto, diga claramente que não sabe.
 ```
+
 ### Documentação complementar
+
 ```
 ✅ Documentação Agente: [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
 ✅ Base de Conhecimento:  [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
@@ -43,9 +45,11 @@ O Agente ADE (Gestor Pessoal Financeiro Inteligente) é uma solução proprietá
 ✅ Documentação Segurança (Cyber): [`docs/06-seguranca-cyber.md`](./docs/06-seguranca-cyber.md)
 ✅ Definição do Agente (AGENTS.md): [`AGENTS.md`](./AGENTS.md)
 ```
+
 ## 🧠 Inteligência Artificial (OpenAI API)
 
 O núcleo do Agente ADE é alimentado pelo modelo gpt-4.1-mini da OpenAI, selecionado por suas capacidades técnicas superiores:
+
 ```
 ✅ Seguimento de Instruções: O gpt-4.1-mini oferece alta precisão na execução de diretrizes complexas e governança financeira.
 
@@ -54,39 +58,27 @@ O núcleo do Agente ADE é alimentado pelo modelo gpt-4.1-mini da OpenAI, seleci
 ✅ Consultoria Proativa: A LLM é configurada para cruzar dados do perfil do usuário com conceitos de educação financeira, minimizando alucinações e garantindo respostas fundamentadas na base de conhecimento — sem recomendar produtos ou aplicações específicas.
 ```
 
-
 ## 🖼️ Telas da APP ADE - Gestor Pessoal Financeiro Inteligente
-
 
 #### ✅ ADE - Tela Inicial
 
-
-![ADE - Teste Inicial](./images/Tela%20inicial%20ADE.png)
-
+![ADE - Teste Inicial](<./images/Tela%20inicial%20ADE.png>)
 
 #### ✅ ADE - Tela Análise de gastos
 
-
-![ADE - Tela Análise de gastos](./images/Tela%20analise%20de%20gastos%20ADE.png)
-
+![ADE - Tela Análise de gastos](<./images/Tela%20analise%20de%20gastos%20ADE.png>)
 
 #### ✅ ADE - Tela Metas e Reserva de Emergência
 
-
-![ADE - Tela Metas e Reserva de Emergência](./images/Tela%20Metas%20e%20Reserva%20de%20emergencia%20ADE.png)
+![ADE - Tela Metas e Reserva de Emergência](<./images/Tela%20Metas%20e%20Reserva%20de%20emergencia%20ADE.png>)
 
 #### ✅ ADE - Tela Produtos Disponíveis
 
-
-![ADE - Tela Produtos Disponíveis](./images/Tela%20Produtos%20Disponiveis%20ADE.png)
-
+![ADE - Tela Produtos Disponíveis](<./images/Tela%20Produtos%20Disponiveis%20ADE.png>)
 
 #### ✅ ADE - Tela Educação Financeira
 
-
-![ADE - Tela Educação Financeira](./images/Tela%20Educacao%20Financeira%20ADE.png)
-
-
+![ADE - Tela Educação Financeira](<./images/Tela%20Educacao%20Financeira%20ADE.png>)
 
 ## 💬 Experiência do Usuário
 
@@ -116,15 +108,14 @@ referência lateral, organizados em torno de **modos de atuação**:
 
 A inteligência do agente é sustentada por uma infraestrutura de dados composta por quatro arquivos fundamentais localizados na pasta data/:
 
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico detalhado de movimentações para análise de fluxo de caixa. |
-| `historico_atendimento.csv` | CSV |  Registro de interações anteriores para manutenção de contexto. |
-| `perfil_investidor.json` | JSON |  Mapeamento de objetivos, tolerância a risco e horizonte temporal. |
-| `produtos_financeiros.json` | JSON | Catálogo estruturado de serviços e investimentos para recomendações. |
+| Arquivo                       | Formato | Descrição                                                              |
+| ----------------------------- | ------- | ------------------------------------------------------------------------ |
+| `transacoes.csv`            | CSV     | Histórico detalhado de movimentações para análise de fluxo de caixa. |
+| `historico_atendimento.csv` | CSV     | Registro de interações anteriores para manutenção de contexto.       |
+| `perfil_investidor.json`    | JSON    | Mapeamento de objetivos, tolerância a risco e horizonte temporal.       |
+| `produtos_financeiros.json` | JSON    | Catálogo estruturado de serviços e investimentos para recomendações. |
 
-
-###  Diagrama de Arquitetura
+### Diagrama de Arquitetura
 
 ![Arquitetura do Agente ADE com camada de segurança](./images/arquitetura-ade-seguranca.svg)
 
@@ -141,8 +132,9 @@ flowchart TD
 ## 📁 Estrutura do Projeto
 
 A organização do repositório segue a estrutura abaixo:
+
 ```
-📁 dio-lab-bia-do-futuro
+📁 dio-lab-bia-do-futuro-cyber
 
 /
 │
@@ -205,18 +197,17 @@ A organização do repositório segue a estrutura abaixo:
 > [💬 Experiência do Usuário](#-experiência-do-usuário).
 > Para adotá-la como principal, renomeie/substitua o `app.py`:
 > `mv src/app_secure.py src/app.py`.
+
 ## 🛠️ Stack Tecnológica
 
-
-| Arquivo | Descrição |
-|---------|------------------------|
-|Interface | Streamlit (layout wide, seletor de modos, painel de referência lateral, tema customizado). |
-|Processamento| Pandas e NumPy |
-| Validação | Pydantic (Garantia de integridade dos dados). |
-| IA | OpenAI API (`gpt-4.1-mini`), com `stream=True` para reduzir latência percebida. |
+| Arquivo       | Descrição                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------- |
+| Interface     | Streamlit (layout wide, seletor de modos, painel de referência lateral, tema customizado). |
+| Processamento | Pandas e NumPy                                                                              |
+| Validação   | Pydantic (Garantia de integridade dos dados).                                               |
+| IA            | OpenAI API (`gpt-4.1-mini`), com `stream=True` para reduzir latência percebida.        |
 
 ## 📦 Instalação e Execução
-
 
 Clone o repositório:
 
@@ -226,6 +217,7 @@ git clone https://github.com/ademarbarreto/dio-lab-bia-do-futuro-cyber.git
 ```
 
 Configuração do Ambiente:
+
 ```
 bash
 python -m venv venv
@@ -242,6 +234,7 @@ OPENAI_MODEL=gpt-4.1-mini
 ```
 
 Iniciar a Aplicação (versão recomendada — chat completo + segurança):
+
 ```
 bash
 streamlit run src/app_secure.py
@@ -249,12 +242,14 @@ streamlit run src/app_secure.py
 
 Ou, para rodar a versão original (formulário simples, sem as camadas de
 chat e segurança adicionais):
+
 ```
 bash
 streamlit run src/app.py
 ```
 
 Rodar os testes automatizados da camada de segurança:
+
 ```
 bash
 pip install pytest
@@ -263,9 +258,7 @@ pytest tests/ -v
 
 #### ✅ ADE - Resultado do pytest tests/ -v
 
-
-![ADE - Tela pytest](./images/Resultado%20pyteste.png)
-
+![ADE - Tela pytest](<./images/Resultado%20pyteste.png>)
 
 ## 🔒 Segurança (Cyber)
 
@@ -285,35 +278,26 @@ mapeada ao [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top
 
 ## 🖼️ Telas do GITHUB Actions
 
-
 #### ✅ ADE - Tela de auditoria de Segurança (Cyber) - GITHUB Actions
 
-
-
-![ADE - Tela pytest](./images/Tela%20do%20GITHUB%20ACTIONS%20Auditoria%20de%20dependências%20e%20ações.png)
-
+![ADE - Tela Auditoria GITHUB Actions](<./images/Tela%20do%20GITHUB%20ACTIONS%20Auditoria%20de%20dependências%20e%20ações.png>)
 
 #### ✅ ADE -Tela de consulta dos problemas de Segurança (Cyber) - GITHUB Actions
 
-
-![ADE - Tela pytest](./images/Tela%20do%20GITHUB%20ACTIONS%20consulta%20dos%20problemas%20encontrados.png)
-
+![ADE - Tela de consulta GITHUB Actions](<./images/Tela%20do%20GITHUB%20ACTIONS%20consulta%20dos%20problemas%20encontrados.png>)
 
 #### ✅ ADE -Tela de FIX da Segurança (Cyber) - GITHUB Actions
 
-
-![ADE - Tela pytest](./images/Tela%20do%20GITHUB%20ACTIONS%20FIX.png)
-
-
+![ADE - Tela de FIX GITHUB Actions](<./images/Tela%20do%20GITHUB%20ACTIONS%20FIX.png>)
 
 📄 **Documentação completa:** [`docs/06-seguranca-cyber.md`](./docs/06-seguranca-cyber.md)
 ⚙️ **Pipeline:** [`.github/workflows/security.yml`](./.github/workflows/security.yml)
 
 ## ✒️ Autor
+
 Projeto desenvolvido por **Ademar Silva Barreto Junior** como uma solução original de gestão financeira inteligente baseada em IA Generativa.
 
 Este repositório reflete o desenvolvimento completo de documentação e código do Agente ADE.
-
 
 - ✉ **Email:** [ademar.barreto@gmail.com](mailto:ademar.barreto@gmail.com)
 - 💼 **LinkedIn:** [ademarsilvabarretojunior](https://www.linkedin.com/in/ademarsilvabarretojunior/)
@@ -321,4 +305,3 @@ Este repositório reflete o desenvolvimento completo de documentação e código
 - 💻 **GitHub:** [ademarbarreto](https://github.com/ademarbarreto)
 - ✍️ **Medium:** [@ademar.barreto](https://medium.com/@ademar.barreto)
 - 📞 **Telefone:** + 55 (21) 99156-7836
-
