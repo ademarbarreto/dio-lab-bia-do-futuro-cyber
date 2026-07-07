@@ -267,8 +267,6 @@ pytest tests/ -v
 ![ADE - Tela pytest](./images/Resultado%20pyteste.png)
 
 
-
-
 ## 🔒 Segurança (Cyber)
 
 Camada de segurança desenvolvida para o Bootcamp Bradesco - GenAI, Dados & Cyber,
@@ -284,6 +282,29 @@ mapeada ao [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top
 ✅ Dependabot para atualização automática de dependências
 ✅ 40 testes automatizados (pytest) para a camada de segurança
 ```
+
+## 🖼️ Telas do GITHUB Actions
+
+
+#### ✅ ADE - Tela de auditoria de Segurança (Cyber) - GITHUB Actions
+
+
+
+![ADE - Tela pytest](./images/Tela%20do%20GITHUB%20ACTIONS%20Auditoria%20de%20dependências%20e%20ações.png)
+
+
+#### ✅ ADE -Tela de consulta dos problemas de Segurança (Cyber) - GITHUB Actions
+
+
+![ADE - Tela pytest](./images/Tela%20do%20GITHUB%20ACTIONS%20consulta%20dos%20problemas%20encontrados.png)
+
+
+#### ✅ ADE -Tela de FIX da Segurança (Cyber) - GITHUB Actions
+
+
+![ADE - Tela pytest](./images/Tela%20do%20GITHUB%20ACTIONS%20FIX.png)
+
+
 
 📄 **Documentação completa:** [`docs/06-seguranca-cyber.md`](./docs/06-seguranca-cyber.md)
 ⚙️ **Pipeline:** [`.github/workflows/security.yml`](./.github/workflows/security.yml)
